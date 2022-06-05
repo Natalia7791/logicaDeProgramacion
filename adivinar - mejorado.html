@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<h1> PROGRAMA SORTEO</h1>
+<script>
+function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+}
+
+function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+}
+
+function sorteo(n) {
+	return Math.round(Math.random()*n);
+}
+
+var numeroSorteado = sorteo(100);
+var numeroAdivinado = parseInt(prompt("Adivine un número entre 0 y 100"));
+
+if(numeroSorteado == numeroAdivinado){
+	imprimir("usted ganó");
+
+}
+else { 
+imprimir("usted perdió, el número pensado era " + numeroSorteado)
+}
+</script>
